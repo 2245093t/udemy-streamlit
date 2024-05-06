@@ -6,25 +6,25 @@ import time
 
 st.title('streamlit超入門')
 
-#st.write('DataFrame')
+st.write('DataFrame')
 
-# df = pd.DataFrame(
-#     np.random.rand(20, 3),
-#     columns=['a', 'b', 'c']
-# )
-#st.line_chart(df) #折れ線グラフ
-#st.area_chart(df) #面グラフ
-#st.bar_chart(df) #棒グラフ
+df = pd.DataFrame(
+    np.random.rand(20, 3),
+    columns=['a', 'b', 'c']
+)
+st.line_chart(df) #折れ線グラフ
+st.area_chart(df) #面グラフ
+st.bar_chart(df) #棒グラフ
 
-# df = pd.DataFrame(
-#     np.random.rand(100, 2) / [50, 50] + [35.69, 139.70],
-#     columns=['lat', 'lon'] #緯度経度
-# )
-# st.map(df) #地図
+df = pd.DataFrame(
+    np.random.rand(100, 2) / [50, 50] + [35.69, 139.70],
+    columns=['lat', 'lon'] #緯度経度
+)
+st.map(df) #地図
 
-# st.write(df)
-# st.dataframe(df.style.highlight_max(axis=0), width=100, height=100) #axis=0で列方向に最大値をハイライト
-#st.table(df) #スクロールできない(静的)
+st.write(df)
+st.dataframe(df.style.highlight_max(axis=0), width=100, height=100) #axis=0で列方向に最大値をハイライト
+st.table(df) #スクロールできない(静的)
 
 st.write('Display Image')
 
@@ -57,27 +57,27 @@ expander2.write('問い合わせ内容を書く1')
 expander3 = st.expander('問い合わせ3') #折りたたみ
 expander3.write('問い合わせ内容を書く1')
 
-# text = st.text_input('あなたの趣味を教えてください')
-# condition = st.slider('あなたの今の調子は？', 0, 100, 50) #0~100のスライダー。初期値50
+text = st.text_input('あなたの趣味を教えてください')
+condition = st.slider('あなたの今の調子は？', 0, 100, 50) #0~100のスライダー。初期値50
 
-# 'あなたの趣味は', text, 'です'
-# 'コンディション:', condition
+'あなたの趣味は', text, 'です'
+'コンディション:', condition
 
-# """
-# # 章
+"""
+# 章
 
-# ## 節
+## 節
 
-# ### 項
+### 項
 
 
-# ```python
-# import streamlit as st
-# import pandas as pd
-# import numpy as np
-# ```
+```python
+import streamlit as st
+import pandas as pd
+import numpy as np
+```
 
-# """
+"""
 
 st.write('プログレスバーの表示')
 'Start!!'
